@@ -1,5 +1,3 @@
-from sys import stdin
-input = stdin.readline
 def ii():
     return int(input())
 

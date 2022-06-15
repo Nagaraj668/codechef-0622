@@ -1,3 +1,4 @@
+from decimal import Decimal
 class input_data:
     def __init__(self, a, b):
         self.a = a
@@ -7,22 +8,13 @@ class input_data:
 input_list = []
 T = int(input())
 
+def ceildiv(a, b):
+    return -(a // -b)
 
 def process(a, b):
-    if a == b:
-        print(a)
-    elif a == 0 or b == 0:
-        print(-1)
-    else:
-        if a > b:
-            a, b = b, a
-
-        count = 0
-        while a < b:
-            a *= 2
-            count += 1
-
-        print(count + b)
+    sets = ceildiv(a,5)
+    c = (sets - ((b-1) // 5)) - 1
+    print(c)
 
 
 for i in range(1, T+1):

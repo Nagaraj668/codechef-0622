@@ -9,20 +9,19 @@ T = int(input())
 
 
 def process(a, b):
-    if a == b:
-        print(a)
-    elif a == 0 or b == 0:
-        print(-1)
+    i = 1
+    while a < b:
+        a = a + i
+        if (a == b):
+            print("yes")
+            break
+        else:
+            if (i == 1):
+                i = 2
+            else:
+                i = 1
     else:
-        if a > b:
-            a, b = b, a
-
-        count = 0
-        while a < b:
-            a *= 2
-            count += 1
-
-        print(count + b)
+        print("no")
 
 
 for i in range(1, T+1):
